@@ -4,6 +4,14 @@
   
  */
 
+/* library required
+  https://code.google.com/p/wirejungle/source/browse/trunk/libraries/HT1621/
+
+  NOTE: add #include <Arduino.h> at the top of HT1621.cpp
+  
+*/
+
+#include "Arduino.h"
 #include "HT1621.h"
 
 HT1621 ht(2,3,4,5); // data,wr,rd,cs
@@ -11,8 +19,8 @@ HT1621 ht(2,3,4,5); // data,wr,rd,cs
 // #define TS120
 // #define TS125
 // #define TS174
-// #define TS119
-#define TS206
+#define TS119
+// #define TS206
 
 // #define TEST_SEGMENT
 #define TEST_SMALL_SEGMENT
@@ -75,7 +83,7 @@ void setup()
 {
   pinMode(13, OUTPUT);
   ht.begin();
-  ht.sendCommand(HT1621::RC256K);
+//  ht.sendCommand(HT1621::RC256K);
   ht.sendCommand(HT1621::BIAS_THIRD_4_COM);  // FOR TS119
 //  ht.sendCommand(HT1621::BIAS_HALF_4_COM);
   ht.sendCommand(HT1621::SYS_EN);
