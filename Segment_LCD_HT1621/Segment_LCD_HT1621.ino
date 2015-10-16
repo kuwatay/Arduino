@@ -19,8 +19,8 @@ HT1621 ht(2,3,4,5); // data,wr,rd,cs
 // #define TS120
 // #define TS125
 // #define TS174
-#define TS119
-// #define TS206
+// #define TS119
+#define TS206
 
 // #define TEST_SEGMENT
 #define TEST_SMALL_SEGMENT
@@ -40,7 +40,7 @@ char pattern[] = {
 #define LARGE_NUM_DIGIT 8
 #define LARGE_NUM_START 0
 #define SMALL_NUM_DIGIT 2
-#define SMALL_NUM_START 14
+#define SMALL_NUM_START 16
 char pattern[] = {
   0xEB, 0x60, 0xC7, 0xE5, 0x6C, 0xAD, 0xAF, 0xE0,
   0xEF, 0xED, 0xEE, 0x2F, 0x8B, 0x67, 0x8F, 0x8E };
