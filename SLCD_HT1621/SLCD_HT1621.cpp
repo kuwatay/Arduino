@@ -17,8 +17,7 @@
 #include "SLCD_HT1621.h"
 
 SLCD_HT1621::SLCD_HT1621(uint8_t model, uint8_t data, uint8_t wr, uint8_t rd, uint8_t cs) :
-  _model(model), _data(data), _wr(wr), _rd(rd), _cs(cs) 
-{
+  _model(model), _data(data), _wr(wr), _rd(rd), _cs(cs) {
   _ht = HT1621(_data, _wr, _rd, _cs);
 }
 
@@ -53,8 +52,7 @@ void SLCD_HT1621::writeMem8(uint8_t adr, uint8_t data) {
 }
 
 void SLCD_HT1621::setAttrBuf(uint8_t adr, uint8_t data) {
-  _attrBuf[adr] = data &0xf;
-  _ht.writeMem(adr, data & 0xf); // apply it immediately
+    _attrBuf[adr] = data & 0xf;
 }
 
 void SLCD_HT1621::setNum(uint8_t adr, uint8_t num) {
